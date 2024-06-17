@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #1B262C;
+    padding-top: 70px; /* Adjust based on the height of your nav */
+}
+
+.map-container {
+    display: flex;
+    flex-direction: row;
+    margin: 35px;
+    align-items: stretch;
+    height: calc(100vh - 140px); /* Adjust the height based on the total height of the fixed nav and footer */
+    position: fixed;
+    top: 70px; /* Adjust this value to be the height of your nav bar */
+    width: 100%;
+    z-index: 1000;
+    padding-right: 2%;
+    padding-top: 0.5%;
+    padding-bottom: 50px; /* Reserve space for the footer */
+}
+
+.map {
+    border: 2px solid #006769;
+    width: 85%;
+    height: 100%; /* Adjust to fill the container */
+}
+
+.file-search-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.file-box {
+    background-color: #006769;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.file-text {
+    margin-bottom: 10px;
+}
+
+.controls {
+    background-color: #006769;
+    padding: 20px;
+    color: #E1F7F5;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.scroll-container {
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-right: -17px; /* Adjust scrollbar offset */
+    padding-right: 17px; /* Compensate for scrollbar */
+}
+
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: white;
+    color: black;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.return-button, .delete-button, .download-button {
+    padding: 10px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.return-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.error-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4c4c;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+/* Navbar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #151515;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.left-logo, .right-logo {
+    width: 70px;
+    height: auto;
+    padding: 10px;
+}
+
+.right-logo {
+    width: 100px;
+    order: 2;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #151515;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.footer-slot {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-slot.left {
+    text-align: left;
+}
+
+.footer-slot.right {
+    text-align: right;
+}
+
+/* button */
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* Adjust this value if your top bar and footer heights are different */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.circle-button {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.current-file {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    margin: 0 auto;
+    border: 4px solid red;
+    width: max-content;
+}
+
+.upload-file {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid green;
+    width: max-content;
+}
+
+.current-file strong {
+    color: black;
+}
+
+.container {
+    text-align: center;
+}
+
+.container form {
+    display: inline-block;
+    text-align: left;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2px;
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+

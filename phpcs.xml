@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ruleset name="CustomRules">
+    <fileextensions>
+        <extension>php</extension>
+        <extension>js</extension>
+    </fileextensions>
+    <rule ref="PSR2"/>
+    <rule ref="Squiz.ControlStructures"/>
+    <rule ref="Squiz.WhiteSpace"/>
+    <rule ref="Squiz.Commenting"/>
+</ruleset>
