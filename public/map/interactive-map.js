@@ -27,41 +27,11 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(data => {
             if (data.file) {
-                fetch(`/geopackages/buurtpolygondata.geojson`)
+                fetch(`/geopackages/${data.file}`)
                     .then(response => response.json())
                     .then(geoJsonData => {
                         console.log('GeoJSON data:', geoJsonData); // Log the data
                         addGeoJsonPoints(geoJsonData, map);
-                        fetch('/fetch-geojson')
-        .then(response => response.json())
-        .then(data => {
-            if (data.file) {
-                fetch(`/geopackages/buurtmapdata.geojson`)
-                    .then(response => response.json())
-                    .then(geoJsonData => {
-                        console.log('GeoJSON data:', geoJsonData); // Log the data
-                        addGeoJsonPoints(geoJsonData, map);
-                    })
-                    .catch(error => {
-                        showError('Error fetching GeoJSON data. Please try again later.');
-                    });
-            } else {
-                showError('No GeoJSON file found. Please upload a file.');
-            }
-        })
-        .catch(error => {
-            showError('Error fetching GeoJSON file name. Please try again later.');
-        });
-
-    function showError(message) {
-        const errorMessage = document.createElement('div');
-        errorMessage.className = 'error-message';
-        errorMessage.textContent = message;
-        document.body.appendChild(errorMessage);
-        setTimeout(() => {
-            errorMessage.style.display = 'none';
-        }, 5000);
-    }
                     })
                     .catch(error => {
                         showError('Error fetching GeoJSON data. Please try again later.');
